@@ -1,0 +1,211 @@
+<html>
+<head>
+<title>Add Doctors form</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#body {
+background-image:url("register.jpeg");
+font-family: Arial, sans-serif;
+background-repeat:no-repeat;
+background-size:cover;
+margin: 0;
+display: flex;
+justify-content: center;
+align-items: center;
+height: 1000px;
+        }
+#body button{
+background:#335d95;
+color:#ffffff;
+border-radius:12px;
+cursor:pointer;
+padding:10px 20px;
+width:100%;
+font-family: Arial, sans-serif;
+font-size:25px;
+}
+#body button:hover{
+background:#00008B;
+}
+#body h2{
+color:#335d95;
+text-align:center;
+font-size:25px;
+}
+#login-form{
+background:#ffffff;
+border-radius: 8px;
+max-width: 400px;
+text-align:left;
+margin:auto;
+padding:20px 30px;
+}
+input{
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ced4da; 
+border-radius: 4px;
+}
+legend{
+font-size: 20px;
+font-weight: bold;
+}
+label{
+font-size: 20px;
+font-weight: bold;
+color:#000000;
+}
+#body a{
+color:#335d95;
+text-decoration:none;
+}
+#body a:hover{
+text-decoration:underline;
+color:#00008B;
+}
+#form-group{
+margin-bottom: 15px;
+}
+ #form-group label {
+ display: block;
+ font-weight: bold;
+ margin-bottom: 5px;
+}
+ #form-group input, #form-group select {
+  width: 100%;
+ padding: 10px;
+ font-size: 16px;
+ border: 1px solid #ccc;
+  border-radius: 4px;
+        }
+ #registration-container {
+ background: #ffffff;
+ padding:20px 30px;
+ border-radius: 8px;
+ box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width:700px;
+        }
+#fieldset-container{
+display:flex;
+gap:30px;
+}
+#logout button:hover{
+background:#ff0000;
+color:#ffffff;
+}
+#button-container{
+display:flex;
+justify-content:center;
+gap:7px;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+<h1>Monitoring Healthcare in Government Hospitals</h1>
+<p>Empowering Government Hospitals With Real-Time Resource Management</p>
+<div id="button-container">
+<button  onclick="location.href='doctorform.html'">Add Doctors</button>
+<button  onclick="location.href='viewhospitals.jsp'">View Govt. Hospitals</button>
+<button  onclick="location.href='admindocs.jsp'">View Doctors</button>
+<button  onclick="location.href='viewpatient.jsp'">View Patients</button>
+<button  onclick="location.href='patientapp.jsp'">Patient's Appointment</button>
+<div id="logout">
+ <button  onclick="location.href='index.html'">Logout</button>
+</div>
+</div>
+</div>
+<div id="body">
+    <div id="registration-container">
+        <h2>Add Doctors</h2>
+        <form action="doctorform.jsp" method="post">
+            <div id="form-group">
+                <label for="fullname">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Enter Doctor's Name" required>
+            </div>
+            <div id="form-group">
+                <label for="gender">Gender</label>
+                <select id="gender" name="gender" required>
+                    <option value="" disabled selected>Select Doctor's Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div id="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter Doctor's Phone Number" maxlength="10" onkeypress="return event.charCode>=48 && event.charCode<=57"
+                required>
+            </div>
+            <div id="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter Doctor's Email" required>
+            </div>
+ <div id="form-group">
+               <label for="department">Department</label>
+                <select id="department" name="department" required>
+                    <option value="" disabled selected>Select Department</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Neurology">Neurology</option>
+                    <option value="Orthopedic">Orthopedics</option>
+                    <option value="Gynecology">Gynecology</option>
+                    <option value="Psychology">Psychology</option>
+                    <option value="Radiology">Radiology</option>
+                    <option value="ENT">E.N.T</option>
+                    <option value="General medicine">General medicine</option>
+                    <option value="Obstetrics">Obstetrics</option>
+                </select>
+            </div>
+       <div id="form-group">
+           <label for="timings">Timings </label>
+                <input type="text" id="timings" name="timings" placeholder="Enter Doctor's Working Days" required>
+                <br><br>
+       </div>
+<fieldset>
+<legend>Hospital Details:</legend>
+<div id="form-group">
+                <label for="hospitalname">Hospital Name</label>
+                <input type="text" id="hospitalname" name="hospitalname" placeholder="Enter Hospital Name" required>
+            </div>
+<div id="fieldset-container">
+
+<div id="form-group">
+    <label for="area">Area</label>
+                <input type="text" id="area" name="area" placeholder="Enter Area" required>
+</div>
+<div id="form-group">
+    <label for="city">City</label>
+    <input type="text" id="city" name="city" placeholder="Enter City" required>
+            </div> 
+<div id="form-group">
+<label for="pincode">Pincode </label>
+                <input type="text" id="pincode" name="pincode" placeholder="Enter Pincode" maxlength="6" onkeypress="return event.charCode>=48 && event.charCode<=57"
+                required>
+ </div></div>
+</fieldset><br>
+           <button type="submit">Add Doctor</button>
+        </form>
+    </div>
+</div>
+<div id="footer">
+<div id="social">
+<h2>Follow us at:</h2>
+<a href="https://www.instagram.com/" target="_blank"><img src="istg.png"></a>
+<a href="https://www.facebook.com/" target="_blank"><img src="fbook.png"></a>
+<a href="https://x.com/__x" target="_blank"><img src="xsocial1.png"></a>
+</div>
+<div id="contact">
+<h2>Contact us at:</h2>
+<p><strong>Email: </strong><a href="mailto:dynamiccreators778@gmail.com">Dynamiccreators778@gmail.com</a></p>
+<p><strong>Phone: </strong>1234567891, 1800557456<br></p>
+<p><strong>Address:</strong>1234 Main Street ,City , Country</p>
+</div>
+</div>
+<div id="copy">
+<p>&copy;2024 Healthcare Monitoring Services. All rights reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+<%@page import="java.sql.*"%>
+<html>
+<head>
+<title>Reset Password</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#body{
+height:600px;
+background-image:url("alogin.jpg");
+font-family: Arial, sans-serif;
+background-repeat:no-repeat;
+background-size:cover;
+align-content: center;
+position:relative;
+padding:0px 200px 0px 200px;
+}
+#body button{
+background:#335d95;
+color:#ffffff;
+border-radius:12px;
+cursor:pointer;
+padding:10px 20px;
+width:100%;
+font-family: Arial, sans-serif;
+font-size:25px;
+}
+#body button:hover{
+background:#00008B;
+}
+#body h2{
+color:#335d95;
+text-align:center;
+font-size:25px;
+}
+#password-form{
+background:#ffffff;
+border-radius: 8px;
+max-width: 400px;
+text-align:left;
+margin:auto;
+padding:20px 30px;
+}
+input{
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ced4da; 
+border-radius: 4px;
+}
+label{
+font-size: 20px;
+font-weight: bold;
+}
+#body a{
+color:#335d95;
+text-decoration:none;
+}
+#body a:hover{
+text-decoration:underline;
+color:#00008B;
+}
+
+</style>
+</head>
+<body>
+<div id="header">
+        <h1>Monitoring Healthcare in Government Hospitals</h1>
+        <p>Empowering Government Hospitals With Real-Time Resource Management</p>
+         <button onclick="location.href='index.html'">Home</button>
+         <button onclick="location.href='adminlogin.html'">Admin Login</button>
+         <button onclick="location.href='patientlogin.html'">Patient Login</button>
+         <button onclick="location.href='#footer'">Contact Us</button>
+    </div>
+    </div>
+<div id="body">
+<div id="password-form">
+<h2>Forgot Password?</h2>
+<form action="reset.jsp" method="post">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" placeholder="Enter Your Username" required><br><br><br>
+  <label for="dob">Date Of Birth:</label><br>
+  <input type="date" id="dob" name="dob" placeholder="Enter the date of birth" required><br><br><br>
+  <label for="newpassword">New Password:</label><br>
+  <input type="password" id="newpassword" name="newpassword" placeholder="Enter Your New Password" required><br><br><br>
+   <button type="submit">Reset Password</button>
+</form> 
+</div>
+</div>
+<div id="footer">
+  <div id="social">
+<h2>Follow us at:</h2>
+<a href="https://www.instagram.com/" target="_blank"><img src="istg.png"></a>
+<a href="https://www.facebook.com/" target="_blank"><img src="fbook.png"></a>
+<a href="https://x.com/__x" target="_blank"><img src="xsocial1.png"></a>
+  </div>
+<div id="contact">
+<h2>Contact us at:</h2>
+<p><strong>Email: </strong><a href="mailto:dynamiccreators778@gmail.com">Dynamiccreators778@gmail.com</a></p>
+<p><strong>Phone: </strong>1234567891, 1800557456<br></p>
+<p><strong>Address:</strong>1234 Main Street ,City , Country</p>
+</div>
+</div>
+<div id="copy">
+<p>&copy;2024 Healthcare Monitoring Services. All rights reserved.</p>
+</div>
+</body>
+</html>

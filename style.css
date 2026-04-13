@@ -1,0 +1,65 @@
+#header{
+    background-color:#335d95;
+   padding: 20px;
+   text-align: center;
+   color:#ffffff;
+   font-size:30px;
+}
+a{
+  color:#000000;
+  text-decoration: none;
+}
+a:hover{
+color:#ffffff;
+}
+#contact a:hover{
+text-decoration:underline;
+}
+button{
+padding: 15px 25px;
+font-size:18px;
+border-radius:12px;
+background:#ffffff;
+color:#000000;
+cursor:pointer;
+transition: background 0.3s, color 0.3s;
+}
+button:hover{
+background:#335d95;
+color:#ffffff;
+}
+#footer{
+padding:5px;
+background-color:#335d95;
+color:#ffffff;
+text-align:center;
+height:300px;
+}
+#footer img{
+height:50px;
+width:50px;
+padding:5px;
+border-radius:5px;
+}
+#social img{
+border-radius:5px;
+}
+#footer a{
+color:#ffffff;
+}
+#contact{
+text-align:center;
+}
+#copy{
+height:50px;
+width:100%;
+margin:0px 0px;
+background-color:#000000;
+color:#ffffff;
+text-align:center;
+font-size:24px;
+padding:5px;
+}
+#contact p{
+text-align:center;
+}

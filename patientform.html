@@ -1,0 +1,150 @@
+<html>
+<head>
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #body{
+            background-image:url("register.jpeg");
+            font-family: Arial, sans-serif;
+            background-repeat:no-repeat;
+            background-size:cover;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 900px;
+        }
+        #registration-container{
+            background: #ffffff;
+            padding:20px 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width:500px;
+        }
+        #body h2{
+            text-align: center;
+            color: #335d95;
+            margin-bottom: 20px;
+        }
+        #form-group{
+            margin-bottom: 15px;
+        }
+        #form-group label{
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        #form-group input, #form-group select {
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        #body button{
+            padding: 15px 25px;
+            font-size:18px;
+            border-radius:12px;
+            background:#335d95;
+            color:#ffffff;
+            cursor:pointer;
+            width:100%;
+            transition: background 0.3s, color 0.3s;
+        }
+        #body button:hover{
+            background:#00008B;
+        }  
+        submit{
+            width: 100%;
+            padding: 10px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #28a745;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        #body a{
+            color:red;
+        }
+        #body a:hover{
+            color:blueviolet
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+        <h1>Monitoring Healthcare in Government Hospitals</h1>
+        <p>Empowering Government Hospitals With Real-Time Resource Management</p>
+         <button onclick="location.href='index.html'">Home</button>
+         <button onclick="location.href='adminlogin.html'">Admin Login</button>
+         <button onclick="location.href='patientlogin.html'">Patient Login</button>
+         <button onclick="location.href='#footer'">Contact Us</button>
+    </div>
+<div id="body">
+  <div id="registration-container">
+     <h2>Registration Form</h2>
+      <form action="patientdetails.jsp" method="post">
+          <div id="form-group">
+              <label for="firstname">First Name</label>
+              <input type="text" id="firstname" name="firstname" placeholder="Enter your first name" required>
+          </div>
+          <div id="form-group">
+              <label for="lastname">Last Name</label>
+              <input type="text" id="lastname" name="lastname" placeholder="Enter your last name" required>
+          </div>
+          <div id="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" name="dob" required>
+          </div>
+          <div id="form-group">
+              <label for="gender">Gender</label>
+              <select id="gender" name="gender" required>
+                  <option value="" disabled selected>Select your gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+              </select>
+          </div>
+          <div id="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" maxlength="10" 
+                     onkeypress="return event.charCode>=48 && event.charCode<=57" required>
+          </div>
+          <div id="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          </div>
+          <div id="form-group">
+              <label for="username">Username</label>
+              <input type="text" id="username" name="username" placeholder="Create a username" required>
+          </div>
+          <div id="form-group">
+              <label for="password">Password</label>
+              <input type="password" id="password" name="password" placeholder="Create a password" required>
+          </div>
+          <button type="submit">Register</button>
+          <p>Already have an account? <a href="patientlogin.html">Login here!</a></p>
+      </form>
+  </div>
+</div>
+
+<div id="footer">
+    <div id="social">
+         <h2>Follow us at:</h2>
+         <a href="https://www.instagram.com/" target="_blank"><img src="istg.png"></a>
+         <a href="https://www.facebook.com/" target="_blank"><img src="fbook.png"></a>
+         <a href="https://x.com/__x" target="_blank"><img src="xsocial1.png"></a>
+    </div>
+    <div id="contact">
+         <h2>Contact us at:</h2>
+         <p><strong>Email: </strong><a href="mailto:dynamiccreators778@gmail.com">Dynamiccreators778@gmail.com</a></p>
+         <p><strong>Phone: </strong>1234567891, 1800557456<br></p>
+         <p><strong>Address:</strong>1234 Main Street ,City , Country</p>
+    </div>
+</div>
+<div id="copy">
+       <p>&copy;2024 Healthcare Monitoring Services. All rights reserved.</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,129 @@
+<html>
+<head>
+<title>Admin Login</title>
+<link rel="stylesheet" href="style.css">
+<style>
+#body{
+height:500px;
+background-image:url("alogin.jpg");
+font-family: Arial, sans-serif;
+background-repeat:no-repeat;
+background-size:cover;
+align-content: center;
+position:relative;
+padding:0px 670px 0px 0px;
+}
+#body button{
+background:#335d95;
+color:#ffffff;
+border-radius:12px;
+cursor:pointer;
+padding:10px 20px;
+width:100%;
+font-family: Arial, sans-serif;
+font-size:25px;
+}
+#body button:hover{
+background:#00008B;
+}
+#body h2{
+color:#335d95;
+text-align:center;
+font-size:25px;
+}
+#login-form{
+background:#ffffff;
+border-radius: 8px;
+max-width: 400px;
+text-align:left;
+margin:auto;
+padding:20px 30px;
+}
+input{
+width: 100%;
+padding: 10px;
+font-size: 16px;
+border: 1px solid #ced4da; 
+border-radius: 4px;
+}
+label{
+font-size: 20px;
+font-weight: bold;
+}
+#body a{
+color:#335d95;
+text-decoration:none;
+}
+#body a:hover{
+text-decoration:underline;
+color:#00008B;
+}
+</style>
+</head>
+<body>
+<div id="header">
+        <h1>Monitoring Healthcare in Government Hospitals</h1>
+        <p>Empowering Government Hospitals With Real-Time Resource Management</p>
+        <button onclick="location.href='index.html'">Home</button>
+         <button onclick="location.href='adminlogin.html'">Admin Login</button>
+         <button onclick="location.href='patientlogin.html'">Patient Login</button>
+         <button onclick="location.href='#footer'">Contact Us</button>
+    </div>
+<div id="body">
+<div id="login-form">
+<h2>Admin Login</h2>
+<form onsubmit="return validate(event)">
+  <label for="username">Username:</label><br>
+  <input type="text" id="username" name="username" placeholder="Enter Your Username" required><br><br><br>
+  <label for="password">Password:</label><br>
+  <input type="password" id="password" name="password" placeholder="Enter Your Password" required><br><br><br>
+<button type="submit">Login</button>
+<p id="message" class="message"></p>
+</form> 
+</div>
+</div>
+
+<div id="footer">
+<div id="social">
+<h2>Follow us at:</h2>
+<a href="https://www.instagram.com/" target="_blank"><img src="istg.png"></a>
+<a href="https://www.facebook.com/" target="_blank"><img src="fbook.png"></a>
+<a href="https://x.com/__x" target="_blank"><img src="xsocial1.png"></a>
+</div>
+
+<div id="contact">
+<h2>Contact us at:</h2>
+<p><strong>Email: </strong><a href="mailto:dynamiccreators778@gmail.com">Dynamiccreators778@gmail.com</a></p>
+<p><strong>Phone: </strong>1234567891, 1800557456<br></p>
+<p><strong>Address:</strong>1234 Main Street ,City , Country</p>
+</div>
+</div>
+    
+<div id="copy">
+<p>&copy;2024 Healthcare Monitoring Services. All rights reserved.</p>
+</div>
+    <script>
+function validate(event){
+event.preventDefault();
+const correctun="admin";
+const correctpass="pass123";
+const enteredun=document.getElementById("username").value;
+const enteredpass=document.getElementById("password").value;
+const message=document.getElementById("message");
+if(enteredun==correctun && enteredpass==correctpass){
+message.style.color="green";
+message.textContent="Login successful!";
+ setTimeout(() => {
+            window.location.href = "doctorform.html";
+        }, 1000); 
+return true;
+}
+else{
+message.style.color="red";
+message.textContent="Please try again!";
+return false;
+}}
+</script>
+
+</body>
+</html>
